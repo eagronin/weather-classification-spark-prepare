@@ -88,7 +88,7 @@ removeAllDF = df.na.drop()
 
 This leaves us with 1,064 rows in dataframe removeAllDF, as can be verified using `removeAllDF.count()`.  
 
-Looking just at the statistics for the air temperature at 9am:
+The summary statistics for the air temperature at 9am are now as follows:
 
 ```python
 removeAllDF.describe('air_temp_9am').show()
@@ -150,7 +150,7 @@ imputeDF.describe('air_temp_9am').show()
 
 The number of rows in air_temp_9am is now 1,095 (increased from 1,090) which means that the feature no longer has missing values.
 
-In the analysis performed in the next section, we will use the version of the data in which all the missing values have been dropped:
+In the analysis performed in the [next section](https://eagronin.github.io/weather-classification-spark-analyze/), we will drop all the rows missing a value in any feature:
 
 ```python
 df = removeAllDF
