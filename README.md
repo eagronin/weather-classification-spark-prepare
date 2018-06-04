@@ -83,7 +83,7 @@ This means that five rows in air_temp_9am have missing values.
 We can drop all the rows missing a value in any feature as follows:
 
 ```python
-removeAllDF.count()
+removeAllDF = df.na.drop()
 ```
 
 This leaves us with 1,064 rows in dataframe removeAllDF, as can be verified using `removeAllDF.count()`.  
