@@ -1,6 +1,6 @@
 # Data Preparation
 
-This section explores and cleans the data to prepare it for the analysis of weather patterns in San Diego, CA.  Specifically, in the [next section](https://eagronin.github.io/weather-classification-spark-analyze/) we will build a decision tree for predicting low humidity days, which increase the risk of wildfires.
+This section explores and cleans the data to prepare it for the analysis of weather patterns in San Diego, CA.  Specifically, in the [next section](https://eagronin.github.io/weather-classification-spark-analyze/) we will build a decision tree for predicting low humidity days, which are known to increase the risk of wildfires.
 
 The dataset is described and imported in the [previous section](https://eagronin.github.io/weather-classification-spark-acquire/)
 
