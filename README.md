@@ -1,6 +1,8 @@
 # Data Preparation
 
-This section explores and cleans the data to prepare it for the analysis of weather patterns in San Diego, CA.  Specifically, in the [next section](https://eagronin.github.io/weather-classification-spark-analyze/) we will build a decision tree for predicting low humidity days, which are known to increase the risk of wildfires.
+## Overview
+
+This section explores and cleans the data to prepare them for the analysis of weather patterns in San Diego, CA.  Specifically, in the [next section](https://eagronin.github.io/weather-classification-spark-analyze/) we build a decision tree for predicting low humidity days, which are known to increase the risk of wildfires.
 
 The dataset is described and imported in the [previous section](https://eagronin.github.io/weather-classification-spark-acquire/).
 
@@ -69,9 +71,9 @@ For example, air_temp_9am has only 1,090 rows:
 df.describe('air_temp_9am').show()
 ```
 
-|summary|      air_temp_9am|
+|summary| air_temp_9am|
 | --- | --- |
-|  count|              1090|
+|  count| 1090 |
 |   mean| 64.93|
 | stddev|11.17|
 |    min|36.75|
@@ -94,16 +96,16 @@ The summary statistics for the air temperature at 9am are now as follows:
 removeAllDF.describe('air_temp_9am').show()
 ```
 
-|summary|      air_temp_9am|
+|summary| air_temp_9am|
 | --- | --- |
-|  count|              1064|
+|  count| 1064|
 |   mean| 65.02|
 | stddev|11.16|
 |    min|36.75|
 |    max| 98.90|
 
 
-After the number of observations for air_temp_9am declined from 1,090 to 1,064, the mean and standard deviation of this feature are still close the original values: mean is 64.933 vs. 65.022, and standard deviation is 11.175 vs. 11.168.
+After the number of observations for air_temp_9am declined from 1,090 to 1,064, the mean and standard deviation of this feature are still close the original values: the mean is 64.933 vs. 65.022, and standard deviation is 11.175 vs. 11.168.
 
 Alternatively, we can replace missing values in each feature with the mean value for that feature:
 
@@ -118,7 +120,7 @@ for x in imputeDF.columns:
     imputeDF = imputeDF.na.fill(meanValue, [x])
 ```
 
-This code produces the following output of the mean values for each feature:
+The above code produces the following output of the mean values for each feature:
 
 ```
 number 545.00
@@ -140,9 +142,9 @@ The summary statistics for air_temp_9am are now as follows:
 imputeDF.describe('air_temp_9am').show()
 ```
 
-|summary|      air_temp_9am|
+|summary| air_temp_9am|
 | --- | --- |
-|  count|              1095|
+|  count| 1095|
 |   mean| 64.93|
 | stddev|11.14|
 |    min|36.75|
