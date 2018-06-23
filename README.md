@@ -8,6 +8,10 @@ The dataset is described and imported in the [previous section](https://eagronin
 
 The analysis is described in the [next section](https://eagronin.github.io/weather-classification-spark-analyze/).
 
+This project is based on assignments from Big Data Specialization by University of California San Diego on Coursera.
+
+The analysis for this project was performed in Spark.
+
 ## Data Exploration
 The **daily_weather.csv** dataset has 11 features and 1,095 rows (or samples) as can be verified using `len(df.columns)` and `df.count()` commands, respectively.
 
