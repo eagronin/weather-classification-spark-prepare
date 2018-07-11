@@ -92,7 +92,7 @@ We can drop all the rows missing a value in any feature as follows:
 removeAllDF = df.na.drop()
 ```
 
-This leaves us with 1,064 rows in dataframe removeAllDF, as can be verified using `removeAllDF.count()`.  
+This leaves us with 1,064 rows in data frame removeAllDF, as can be verified using `removeAllDF.count()`.  
 
 The summary statistics for the air temperature at 9am are now as follows:
 
